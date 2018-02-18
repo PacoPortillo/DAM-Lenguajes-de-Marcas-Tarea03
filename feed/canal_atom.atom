@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es-es">
+
+		<title type="text">La vuelta al mundo | Agencia de viajes</title>
+		<id>http://localhost/Sanchez_Portillo_JFanc_LMSGI03_Tarea/</id>
+		<link rel="self" type="application/atom+xml" href="http://localhost/Sanchez_Portillo_JFanc_LMSGI03_Tarea/feed/canal_atom.atom"/>
+		<link rel="alternate" type="text/html" href="http://localhost/Sanchez_Portillo_JFanc_LMSGI03_Tarea/"/>
+		<updated>2017-01-11T19:32:25Z</updated>
+		<icon>../favicon-144x144.png</icon>
+		<logo>../favicon-144x144.png</logo>
+		<author>
+			<name>José Francisco Sánchez Portillo</name>
+			<email>jfsp.dam@pacoportillo.es</email>
+		</author>
+		
+		<entry>
+			<title>Crucero por Alaska: una experiencia única.</title>
+			<id>http://www.accuweather.com/es/us/anchorage-ak/99501/weather-forecast/346835</id>
+			<link rel="alternate" type="text/html" href="http://www.accuweather.com/es/us/anchorage-ak/99501/weather-forecast/346835" />
+			<updated>2017-01-11T19:42:10Z</updated>
+			<summary>El viaje de tus sueños pasa por visitar uno de los sitios más fríos del planeta. Decubre las temperaturas de unos de los destinos que vas a visitar.</summary>
+			<category term="Viajes"/>
+			<author>
+				<name>José Francisco Sánchez Portillo</name>
+				<email>jfsp.dam@pacoportillo.es</email>
+			</author>
+		</entry>
+		
+		<entry>
+			<title>Partido de liga Celta de Vigo - Málaga - Domingo 8/01/2017.</title>
+			<id>http://futbol.laopiniondemalaga.es/partido/844-Celta-de-Vigo-M-laga-8-enero-2017</id>
+			<link rel="alternate" type="text/html" href="http://futbol.laopiniondemalaga.es/partido/844-Celta-de-Vigo-M-laga-8-enero-2017" />
+			<updated>2017-01-11T19:52:47Z</updated>
+			<summary>Derrota en tierras gallegas de nuestro equipo, que le vamos a hacer para la próxima será mejor. Toda la información del encuentro que se saldó con el resultado desfavorable 3 a 1.</summary>
+			<category term="Deportes"/>
+			<author>
+				<name>José Francisco Sánchez Portillo</name>
+				<email>jfsp.dam@pacoportillo.es</email>
+			</author>
+		</entry>
+		
+		<entry>
+			<title>Herramientas para un Community Manager:</title>
+			<id>https://youtu.be/miyEJvE_KuI</id>
+			<link rel="alternate" type="text/html" href="https://youtu.be/miyEJvE_KuI" />
+			<updated>2017-01-11T20:26:12Z</updated>
+			<summary>La mejor herramienta de productividad es una buena dosis de concentración. Sin embargo, el trabajo del community manager implica numerosas distracciones y una ayuda nunca está de más. Conoce en este video algunas herramientas de ayuda para la gestión de tu trabajo.</summary>
+			<category term="Informática"/>
+			<author>
+				<name>José Francisco Sánchez Portillo</name>
+				<email>jfsp.dam@pacoportillo.es</email>
+			</author>
+		</entry>
+	</feed>

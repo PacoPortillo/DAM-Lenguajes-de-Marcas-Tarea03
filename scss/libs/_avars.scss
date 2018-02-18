@@ -1,0 +1,45 @@
+// Paletas de Color:
+$colorMM: #808080;
+$colorFF: #fff;
+$colorBB: #000;
+$color00: #ffffff; // Fondo Principal
+$color01: #819fa8; // AZUL_APAG__Fondo Secundario / Fondo de Nav
+$color02: #e59c70; // NARANJA__Fondo Terciario
+$color03: #333; // Color Texto Principal
+$color04: #3e5ea8; // AZUL__Color de Texto Secundario
+$color05: #de2d37; // ROJO__Fondo Botón Principal / Fondo Item Activo de Nav
+
+//$color09: #bf4a3c;
+
+
+// Fuentes y Tipografías:
+$f-icon01:				FontAwesome;
+
+// Media Query
+$mobilePortrait:		"(max-width: 480px)";		
+$mobileLandscape:		"(min-width: 480px) and (max-width: 600px)";
+$tabletPortrait:		"(min-width: 600px) and (max-width: 720px)";
+$tabletLandscape:		"(min-width: 720px) and (max-width: 975px)";
+$desktop:				"(min-width: 975px) and (max-width: 1200px)";
+$xxdesktop:				"(min-width: 1200px)";
+
+$xs768:					"(max-width: 767px)";
+$sm768-991:				"(min-width: 768px) and (max-width: 991px)";
+$md992-1199:			"(min-width: 992px) and (max-width: 1199px)";
+$lg1200:				"(min-width: 1200px)";
+
+
+
+// Font.
+// http://librosweb.es/referencia/css/font.html
+// ([font-style] [font-weight] font-size[/line-height] font-family )
+// $f-style:				italic;
+// $f-weight:				bold;
+// $f-size:				14px; // ====================================================== Valor de REFERENCIA
+// $l-height:				1.71; // line-height => el valor normal es: 1.45 o normal aprox
+// $f-family01:			'Open Sans', Helvetica, sans-serif; // Importada de Google Fonts
+// $f-family02:			'Courier New', monospace;
+// $f-icon01:				FontAwesome;
+// $f-icon02:				FontAwesome;
+// $l-spacing:				0.075em; // letter-spacing => el valor normal es: 0
+

@@ -1,0 +1,53 @@
+// Archivo de NORMALIZE
+
+/* ESTE ARCHIVO HA SIDO GENERADO A PARTIR DE ARCHIVOS SCSS UTILIZANDO SASS */
+/* ME SIRVE PARA TENER UNA MEJOR ORGANIZACIÓN DE LOS ESTILOS Y PODER TRABAJARLES MEJOR */
+
+/* NORMALIZAR LOS ESTILOS */
+html, 
+body { 
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+// Enlaces
+
+// Quitar Subrayado
+a, 
+a:hover { 
+	text-decoration: none; 
+}
+
+// Quitar marco de enlaces activos
+a:active, 
+a:active * { 
+	outline: 0 none !important; 
+	text-decoration: none; 
+}
+
+a:focus, 
+a:focus * { 
+	outline: 0 none !important; 
+	text-decoration: none; 
+}
+
+input[type="button"], input[type="reset"], input[type="submit"]   {
+	outline: 0 none !important;
+	text-decoration: none;
+}
+
+
+// Fin de Enlaces
+
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+iframe {
+	border-style: none;
+}
+/* FIN DE NORMALIZAR LOS ESTILOS */
+

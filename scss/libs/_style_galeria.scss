@@ -1,0 +1,134 @@
+
+
+/* ESTILOS PARA LA GALERÍA DE FOTOS */
+.fotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.galeria{
+  margin: 0px;
+  background-color: white;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+    li {
+      flex-grow: 1;
+      height: 280px;
+      cursor: pointer;
+      @include mix-a-transition(300ms, ease-in-out, $propiedad: all);
+
+      &:hover {
+        flex-grow: 6;
+       height: 400px;
+      }
+    }
+}
+
+
+
+
+/* CÓDIGO PARA LA GALERÍA DE LA PÁGINA INICIO */
+.ini .galeria li:nth-child(1){
+  background: url("../imagenes/galeria/inicio01.jpg") center/cover;
+}
+.ini .galeria li:nth-child(2){
+  background: url("../imagenes/galeria/inicio02.JPG") center/cover;
+}
+.ini .galeria li:nth-child(3){
+  background: url("../imagenes/galeria/inicio03.jpg") center/cover;
+}
+.ini .galeria li:nth-child(4){
+  background: url("../imagenes/galeria/inicio04.jpg") center/cover;
+}
+.ini .galeria li:nth-child(5){
+  background: url("../imagenes/galeria/inicio05.jpg") center/cover;
+}
+/* FIN DE CÓDIGO PARA LA GALERÍA DE LA PÁGINA INICIO */
+
+/* CÓDIGO PARA LA GALERÍA DE LA PÁGINA QUIENES SOMOS */
+/* .qui .galeria li:nth-child(1){
+  background: url("../imagenes/galeria/quienes01bn.jpg") center/cover;
+}
+.qui .galeria li:nth-child(1):hover {
+  background: url("../imagenes/galeria/quienes01.jpg") center/cover;
+}
+
+.qui .galeria li:nth-child(2){
+  background: url("../imagenes/galeria/quienes02bn.jpg") center/cover;
+}
+.qui .galeria li:nth-child(2):hover {
+  background: url("../imagenes/galeria/quienes02.JPG") center/cover;
+}
+
+.qui .galeria li:nth-child(3){
+  background: url("../imagenes/galeria/quienes03bn.jpg") center/cover;
+}
+.qui .galeria li:nth-child(3):hover {
+  background: url("../imagenes/galeria/quienes03.JPG") center/cover;
+}
+
+.qui .galeria li:nth-child(4){
+  background: url("../imagenes/galeria/quienes04bn.jpg") center/cover;
+}
+.qui .galeria li:nth-child(4):hover {
+  background: url("../imagenes/galeria/quienes04.jpg") center/cover;
+}
+
+.qui .galeria li:nth-child(5){
+  background: url("../imagenes/galeria/quienes05bn.jpg") center/cover;
+}
+.qui .galeria li:nth-child(5):hover {
+  background: url("../imagenes/galeria/quienes05.jpg") center/cover;
+} */
+/* FIN DE CÓDIGO PARA LA GALERÍA DE LA PÁGINA QUIENES SOMOS */
+
+/* CÓDIGO PARA LA GALERÍA DE LA PÁGINA CRUCEROS*/
+/* .cru .galeria li:nth-child(1){
+  background: url("../imagenes/galeria/cruceros01.JPG") center/cover;
+}
+.cru .galeria li:nth-child(2){
+  background: url("../imagenes/galeria/cruceros02.JPG") center/cover;
+}
+.cru .galeria li:nth-child(3){
+  background: url("../imagenes/galeria/cruceros03.JPG") center/cover;
+}
+.cru .galeria li:nth-child(4){
+  background: url("../imagenes/galeria/cruceros04.JPG") center/cover;
+}
+.cru .galeria li:nth-child(5){
+  background: url("../imagenes/galeria/cruceros05.JPG") center/cover;
+} */
+/* FIN DE CÓDIGO PARA LA GALERÍA DE LA PÁGINA CRUCEROS */
+
+
+/* CÓDIGO PARA LA GALERÍA DE LA PÁGINA CONTACTO*/
+/* .con .galeria li:nth-child(1){
+  background: url("../imagenes/galeria/contacto00.jpg") center/cover;
+} */
+/* FIN DE CÓDIGO PARA LA GALERÍA DE LA PÁGINA CONTACTO */
+
+
+
+
+
+
+
+@media (max-width: 549px) {
+  .galeria {
+    flex-direction: column;
+  }
+  
+  .galeria li{
+  	border: 1px solid $color05;
+    height: 60px;
+  }
+  
+}
+/* FIN DE ESTILOS PARA LA GALERIA DE FOTOS */
+

@@ -1,0 +1,267 @@
+// ======================================================================
+// Mixin Transicion de los enlaces <a> <button>
+// $delay: .3s .5s .7s; $curva: ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier; 
+// Transiciones (curva). http://www.bufa.es/css3-transitions/
+// Ejemplo de uso:
+    //img {
+    //     border-radius: 50%;
+    //     @include mix-a-transition(300ms, ease-in-out, $propiedad: all); <==
+    //   }
+@mixin mix-a-transition($delay, $curva, $propiedad: all) {
+    -webkit-transition: $propiedad $delay $curva; // Efecto de transición entre los estilos de a y los de a:hover
+       -moz-transition: $propiedad $delay $curva;
+        -ms-transition: $propiedad $delay $curva;
+         -o-transition: $propiedad $delay $curva;
+            transition: $propiedad $delay $curva;
+}
+
+
+
+// Ejemplo de uso: @include mix-a-transform(rotate(-16deg));
+@mixin mix-a-transform($contenido) {
+    -webkit-transform: $contenido; 
+       -moz-transform: $contenido;
+        -ms-transform: $contenido;
+         -o-transform: $contenido;
+            transform: $contenido;
+}
+
+
+
+
+// ======================================================================
+// Mixin Animation:
+// Mixin KeyFrames:
+
+// Con crear este mixin es posible ahorrarse los demás, pero se trabaja más el keyframe. Por ejemplo:
+// background-color:#333;
+// opacity:.5;
+// @include animation(fadeout, 4s);
+// @include keyframes(fadeout){ 0% { opacity:1; background-color:#ff6400; } 25% { opacity:1; background-color:#ff6400; } 100% { opacity:.5; background-color:#333; } }
+@mixin mix-animation($name-valores) {
+  -webkit-animation: $name-valores;
+  -moz-animation: $name-valores;
+  -ms-animation: $name-valores;
+  -o-animation: $name-valores;
+  animation: $name-valores;
+}
+
+
+// Estos son otros posibles: https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS
+
+// Especifica el nombre de la regla @keyframes que describe los fotogramas de la animación.
+@mixin mix-animation-name($name) {
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -ms-animation-name: $name;
+  -o-animation-name: $name;
+  animation-name: $name;
+}
+// Indica la cantidad de tiempo que la animación consume en completar su ciclo (duración).
+@mixin mix-animation-duration($time) {
+  -webkit-animation-duration: $time;
+  -moz-animation-duration: $time;
+  -ms-animation-duration: $time;
+  -o-animation-duration: $time;
+  animation-duration: $time;
+}
+// Indica el ritmo de la animación, es decir, como se muestran los fotogramas de la animación, estableciendo curvas de aceleración.
+// https://developer.mozilla.org/es/docs/Web/CSS/animation-timing-function
+// ease, ease-in, ease-out, ease-in-out, linear, step-start, step-end
+@mixin mix-animation-timing-function($valor) {
+  -webkit-animation-timing-function: $valor;
+  -moz-animation-timing-function: $valor;
+  -ms-animation-timing-function: $valor;
+  -o-animation-timing-function: $valor;
+  animation-timing-function: $valor;
+}
+// El número de veces que se repite. Podemos indicar infinite para repetir la animación indefinidamente.
+// https://developer.mozilla.org/es/docs/Web/CSS/animation-iteration-count
+// infinite | <number>
+@mixin mix-animation-iteration-count($cont) {
+  -webkit-animation-iteration-count: $cont;
+  -moz-animation-iteration-count: $cont;
+  -ms-animation-iteration-count: $cont;
+  -o-animation-iteration-count: $cont;
+  animation-iteration-count: $cont;
+}
+// Indica si la animación debe retroceder hasta el fotograma de inicio al finalizar la secuencia 
+//o si debe comenzar desde el principio al llegar al final.
+// https://developer.mozilla.org/es/docs/Web/CSS/animation-direction
+// [ normal | reverse | alternate | alternate-reverse ] [, [ normal | reverse | alternate | alternate-reverse ] ]*
+@mixin mix-animation-direction($dir) {
+  -webkit-animation-direction: $dir;
+  -moz-animation-direction: $dir;
+  -ms-animation-direction: $dir;
+  -o-animation-direction: $dir;
+  animation-direction: $dir;
+}
+// Tiempo de retardo entre el momento en que el elemento se carga y el comienzo de la secuencia de la animación.
+// https://developer.mozilla.org/es/docs/Web/CSS/animation-delay
+// <time> [, <time>]*
+@mixin mix-animation-delay($time) {
+  -webkit-animation-delay: $time;
+  -moz-animation-delay: $time;
+  -ms-animation-delay: $time;
+  -o-animation-delay: $time;
+  animation-delay: $time;
+}
+// Permite pausar y reanudar la secuencia de la animación
+// https://developer.mozilla.org/es/docs/Web/CSS/animation-play-state
+// running | paused
+@mixin mix-animation-play-state($valor) {
+  -webkit-animation-play-state: $valor;
+  -moz-animation-play-state: $valor;
+  -ms-animation-play-state: $valor;
+  -o-animation-play-state: $valor;
+  animation-play-state: $valor;
+}
+// Especifica qué valores tendrán las propiedades después de finalizar la animación 
+// (los de antes de ejecutarla, los del último fotograma de la animación o ambos).
+// https://developer.mozilla.org/es/docs/Web/CSS/animation-fill-mode
+// none | forwards | backwards | both
+@mixin mix-animation-fill-mode($valor) {
+  -webkit-animation-fill-mode: $valor;
+  -moz-animation-fill-mode: $valor;
+  -ms-animation-fill-mode: $valor;
+  -o-animation-fill-mode: $valor;
+  animation-fill-mode: $valor;
+}
+
+// El KeyFrame para la ejecución del animation. Por ejemplo:
+// @include keyframes(fadeout){ 0% { opacity:1; background-color:#ff6400; } 25% { opacity:1; background-color:#ff6400; } 100% { opacity:.5; background-color:#333; } }
+// @include keyframes(animatInit){ from { width: 0; } to { width: 100%; } }
+// @include keyframes(moreAnimat){ 0% { bottom: -75px; opacity:0; } 100% { bottom: 0; opacity:1; } }
+@mixin mix-keyframes($name) {
+  @-webkit-keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @-ms-keyframes #{$name} { @content; }
+  @keyframes #{$name} { @content; }
+}
+
+// Fin Mixin Animation:
+// Fin Mixin KeyFrames:
+// ======================================================================
+
+
+
+// ======================================================================
+// Mixin Colores Gradientes
+@mixin mix-gradiant01($color, $color-mezcla: #fff, $grado: 0deg, $color-base: #fff){
+    background: $color-base;  
+    background: -webkit-linear-gradient($grado, $color, $color-mezcla) no-repeat fixed 0 0 ;
+    background: -o-linear-gradient($grado, $color, $color-mezcla) no-repeat fixed 0 0 ;
+    background: -moz-linear-gradient($grado, $color, $color-mezcla) no-repeat fixed 0 0 ;
+    background: linear-gradient($grado, $color, $color-mezcla) no-repeat fixed 0 0 ;
+}
+// Gradiante con foto de fondo
+@mixin mix-gradiant02($url, $color, $color-mezcla: #fff, $grado: 0deg, $color-base: #fff){
+  background-color: $color-base;
+  background-image: -moz-linear-gradient($grado, $color, $color-mezcla), url($url);
+  background-image: -webkit-linear-gradient($grado, $color, $color-mezcla), url($url);
+  background-image: -ms-linear-gradient($grado, $color, $color-mezcla), url($url);
+  background-image: linear-gradient($grado, $color, $color-mezcla), url($url);
+}
+
+@mixin mix-gradiant02($color01, $color02, $color03, $color04, $color05, $color06, $color07, $color08, $color09, $grado: 90deg, $color-base: #fff){
+    $width: 100/9;
+    background: $color-base;
+  background: -webkit-linear-gradient(
+    $grado, 
+    $color01, $color01 #{$width}%, 
+    $color02 #{$width}%, $color02 #{$width*2}%, 
+    $color03 #{$width*2}%, $color03 #{$width*3}%, 
+    $color04 #{$width*3}%, $color04 #{$width*4}%, 
+    $color05 #{$width*4}%, $color05 #{$width*5}%, 
+    $color06 #{$width*5}%, $color06 #{$width*6}%, 
+    $color07 #{$width*6}%, $color07 #{$width*7}%,
+    $color08 #{$width*7}%, $color08 #{$width*8}%,
+    $color09 #{$width*8}%, $color09 #{$width*9}%);
+  background: -o-linear-gradient(
+    $grado, 
+    $color01, $color01 #{$width}%, 
+    $color02 #{$width}%, $color02 #{$width*2}%, 
+    $color03 #{$width*2}%, $color03 #{$width*3}%, 
+    $color04 #{$width*3}%, $color04 #{$width*4}%, 
+    $color05 #{$width*4}%, $color05 #{$width*5}%, 
+    $color06 #{$width*5}%, $color06 #{$width*6}%, 
+    $color07 #{$width*6}%, $color07 #{$width*7}%,
+    $color08 #{$width*7}%, $color08 #{$width*8}%,
+    $color09 #{$width*8}%, $color09 #{$width*9}%);
+  background: -moz-linear-gradient(
+    $grado, 
+    $color01, $color01 #{$width}%, 
+    $color02 #{$width}%, $color02 #{$width*2}%, 
+    $color03 #{$width*2}%, $color03 #{$width*3}%, 
+    $color04 #{$width*3}%, $color04 #{$width*4}%, 
+    $color05 #{$width*4}%, $color05 #{$width*5}%, 
+    $color06 #{$width*5}%, $color06 #{$width*6}%, 
+    $color07 #{$width*6}%, $color07 #{$width*7}%,
+    $color08 #{$width*7}%, $color08 #{$width*8}%,
+    $color09 #{$width*8}%, $color09 #{$width*9}%);
+  background: linear-gradient(
+    $grado, 
+    $color01, $color01 #{$width}%, 
+    $color02 #{$width}%, $color02 #{$width*2}%, 
+    $color03 #{$width*2}%, $color03 #{$width*3}%, 
+    $color04 #{$width*3}%, $color04 #{$width*4}%, 
+    $color05 #{$width*4}%, $color05 #{$width*5}%, 
+    $color06 #{$width*5}%, $color06 #{$width*6}%, 
+    $color07 #{$width*6}%, $color07 #{$width*7}%,
+    $color08 #{$width*7}%, $color08 #{$width*8}%,
+    $color09 #{$width*8}%, $color09 #{$width*9}%);
+}
+// Fin Mixin Colores Gradientes
+// ======================================================================
+
+
+// ======================================================================
+// Mixin @MediaQuerys
+@mixin mix-mediaQuery($mediaQuery) {
+  @if $mediaQuery  == mobilePortrait {
+    @media #{$mobilePortrait} { @content; }
+  }
+  @if $mediaQuery  == mobileLandscape {
+    @media #{$mobileLandscape} { @content; }
+  }
+  @if $mediaQuery  == tabletPortrait {
+    @media #{$tabletPortrait } { @content; }
+  }
+  @if $mediaQuery  == tabletLandscape {
+    @media #{$tabletLandscape} { @content; }
+  }
+  @if $mediaQuery  == desktop {
+    @media #{$desktop} { @content; }
+  }
+  @if $mediaQuery  == xxdesktop {
+    @media #{$xxdesktop} { @content; }
+  }
+
+  @if $mediaQuery  == xs768 {
+    @media #{$xs768} { @content; }
+  }
+  @if $mediaQuery  == sm768-991 {
+    @media #{$sm768-991} { @content; }
+  }
+  @if $mediaQuery  == md992-1199 {
+    @media #{$md992-1199} { @content; }
+  }
+  @if $mediaQuery  == lg1200 {
+    @media #{$lg1200} { @content; }
+  }
+}
+
+// Ejemplo de funcionamiento:
+// @include mix-mediaQuery(xs768) {
+    // .aside-page-ocult {
+            // display: none;
+        // }
+// }
+// @include mix-mediaQuery(sm768-991) {
+    // .aside-page-ocult {
+            // display: none;
+        // }
+// }
+
+// Fin Mixin @MediaQuerys
+// ======================================================================

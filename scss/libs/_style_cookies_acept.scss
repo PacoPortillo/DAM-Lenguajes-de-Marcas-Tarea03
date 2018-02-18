@@ -1,0 +1,72 @@
+// Estilos de la Politica de Cookies, este archivo se complemeta con js/code_cookies_acept.js
+// ======================================================================
+// COOKIES
+
+
+/* Mensaje Legal */
+
+#mesaje_legal {
+    //display:none;
+    position:fixed;
+    left:0%;
+    right:5%;
+    bottom:0px;
+    width:90%;
+    border-radius: 0px 8px 0px 0;
+    text-align:center;
+    min-height:10px;
+    background-color: rgba($colorBB, 0.7);
+    color:$colorFF;
+    z-index:99999;
+}
+
+.mesaje_legal_inner {
+    width:100%;
+    padding: .3em 3.2em 0 .5em;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: .8em;
+    //line-height: .2em;
+
+    a.ok {
+        padding:4px;
+        color:  $colorFF;
+        text-decoration:none;
+            &:hover {
+                background-color: $colorBB;
+            }
+    }
+    a.info {
+        padding-left:5px;
+        text-decoration:none;
+        color: $colorFF;
+        text-decoration: underline;
+
+        &:hover {
+            color: $colorFF - 50;
+        }
+    }
+    a.x {
+        // background: #aa0000 url("../images/close.png") repeat scroll 0 0;
+            background-color: rgba($colorBB, 0.7);
+            //border-radius: 0 16px 0 0;
+            color: #fff;
+            // cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            height: 20px;
+            line-height: 1.3em;
+            position: absolute;
+            right: 10px;
+            text-align: center;
+            top: 5px;
+            width: 20px;
+
+            &:hover {
+                background-color: rgba(red, 0.7);
+            }
+    }
+}
+
+/* Mensaje Legal */
+// Fin COOKIES 
+// ======================================================================

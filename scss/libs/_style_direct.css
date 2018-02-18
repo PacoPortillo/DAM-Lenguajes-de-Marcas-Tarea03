@@ -1,0 +1,29 @@
+
+
+/* ESTILOS DIRECTOS */
+.pasar-left {
+    float: left;
+}
+.pasar-right {
+    float: right;
+}
+.pasar-clear {
+	clear: both;
+}
+
+mark {
+	background-color: rgba($color04, 0.2);
+}
+
+.required {
+	color: rgba($color05, 0.4);
+
+		&::before {
+		content: "\f069";
+		font-family: $f-icon01;
+		font-size: 0.8em;
+		font-weight: bold;
+		}
+	}
+/* FIN DE ESTILOS DIRECTOS */
+
